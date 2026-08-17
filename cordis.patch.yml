@@ -1,0 +1,8 @@
+# dsh-command-skill bundle patch: inserts the command-skill plugin row into
+# the web profile roster. The node half (exports ".") runs in the host
+# process and registers the /skill command plus the session skill-preference
+# injection; the browser half (declared by `dsh.client`, served from
+# lib/client.js) decorates /skill with a popup selector.
+- insert:
+    - id: command-skill
+      name: dsh-command-skill
